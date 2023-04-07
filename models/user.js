@@ -44,5 +44,4 @@ module.exports = { User }
 
 
 
-
 // 다른곳에서도 사용가능하도록 exports
