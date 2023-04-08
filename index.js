@@ -5,14 +5,17 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const { User } = require("./models/user");
 
+
 var d = require('mongoose');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
-mongoose.connect
+mongoose.connect('mongodb+srv://jimin:sin011221&@boilerplate.aympa7c.mongodb.net/test',{
+userNewUrlParse : true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
+}).then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
 
 app.get('/', (req, res) => {
@@ -30,6 +33,5 @@ app.post('/register', (req, res) => {
   }) 
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-});
+app.listen(port, () => 
+  console.log(`Example app listening on port ${port}!`));

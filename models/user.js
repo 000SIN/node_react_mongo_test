@@ -39,7 +39,7 @@ const userSchema = mongoose.Schema({//
     }
 })
 
-const User = Mongoose.model('User', userSchema) // (모델명, 스키마)
+const User = mongoose.model('User', userSchema) // (모델명, 스키마)
 module.exports = { User }
 
 
