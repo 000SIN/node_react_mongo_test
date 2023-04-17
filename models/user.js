@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({//
     },
     password: {
         type : String, //문자열
-        maxlength : 5
+        maxlength : 50
     },
     lastname : {
         type : String, //문자열

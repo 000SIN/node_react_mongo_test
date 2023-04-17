@@ -46,3 +46,12 @@ app.listen(port, () => {
 });
 
 //회원가입을 위한 라우트 만드는 과정
+
+async function connectToDatabase(){
+  try{
+await.mongoose.connect('mongodb+srv://jimin:sin011221&@boilerplate.aympa7c.mongodb.net/test',
+//{useNewUrlParser : true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false}
+).then(function(){}, console.log('MongoDB Connected...'))
+.catch(err => console.log(err))
+}
+}
